@@ -29,7 +29,7 @@ Install the git client, then clone `nix-config`
 
 ```bash
 nix-env -iA gitAndTools.gitFull
-git clone git@github.com:kunxi/nix-config.git ~/.config/nixpkgs
+git clone https://github.com/kunxi/nix-config.git ~/.config/nixpkgs
 ```
 
 Then run `home-manager` to finish the deployment.
