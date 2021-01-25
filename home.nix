@@ -6,6 +6,10 @@ let
   username = builtins.getEnv "USER";
 in
 {
+  imports = [
+    ./minizinc/default.nix
+  ];
+
   home = {
     packages = with pkgs; [
       htop
