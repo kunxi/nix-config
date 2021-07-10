@@ -66,3 +66,4 @@ to break the tie:
 ```
 nix-env --set-flag priority 3 git-2.33.0
 ```
+

@@ -8,6 +8,7 @@ in
 {
   imports = [
     ./minizinc/default.nix
+    ./nodejs/default.nix
   ];
 
   home = {
@@ -20,10 +21,6 @@ in
       ltrace
       inetutils
       wget
-
-      # nodej
-      nodejs-14_x
-      yarn
 
       # python, using conda
       # First time use:
