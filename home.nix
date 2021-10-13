@@ -45,7 +45,7 @@ in
 
     username = username;
     homeDirectory = homedir;
-    stateVersion = "21.03";
+    stateVersion = "21.11";
   };
 
   programs.home-manager.enable = true;
