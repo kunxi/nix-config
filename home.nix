@@ -71,7 +71,7 @@ in
   # Use nix-direnv integration
   programs.direnv = {
     enable = true;
-    enableNixDirenvIntegration = true;
+    nix-direnv.enable = true;
   };
 
   # neovim
