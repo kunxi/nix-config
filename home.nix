@@ -132,7 +132,8 @@ in
       merge.tool = "vimdiff";
       diff.tool = "vimdiff";
       difftool.prompt = false;
-      push.default = "simple";
+      pull.rebaes = true;
+      push.default = "current";
     };
 
     # TODO: add gitignore.
