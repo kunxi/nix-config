@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  # Invoke home-manager: `home-manager switch` to deploy the change, to switch
+  # the shell:
+  #  $ echo /home/bookstack/.nix-profile/bin/zsh | sudo tee -a /etc/shells
+  #  $ chsh -s /home/bookstack/.nix-profile/bin/zsh
+
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
