@@ -7,10 +7,10 @@ let
 in
 {
   imports = [
-    ./git/default.nix
-    ./zsh/default.nix
-    ./rust/default.nix
-    ./python/default.nix
+    ./git.nix
+    ./zsh.nix
+    ./rust.nix
+    ./python.nix
     ./nodejs/default.nix
     ./minizinc/default.nix
   ];
