@@ -10,6 +10,7 @@ in
     ./git/default.nix
     ./zsh/default.nix
     ./rust/default.nix
+    ./python/default.nix
     ./nodejs/default.nix
     ./minizinc/default.nix
   ];
@@ -25,15 +26,6 @@ in
       inetutils
       wget
       gcc
-
-      # python, using conda
-      # First time use:
-      # $ conda-shell
-      # $ conda-install
-      # Normal use:
-      # $ conda-shell
-      # $ conda install ipython numpy
-      conda
     ];
 
     sessionVariables = {
