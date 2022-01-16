@@ -24,6 +24,7 @@ in
       ltrace
       inetutils
       wget
+      gcc
 
       # python, using conda
       # First time use:
