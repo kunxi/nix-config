@@ -9,6 +9,7 @@ in
   imports = [
     ./git/default.nix
     ./zsh/default.nix
+    ./rust/default.nix
     ./nodejs/default.nix
     ./minizinc/default.nix
   ];
