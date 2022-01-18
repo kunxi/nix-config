@@ -7,6 +7,7 @@ let
 in
 {
   imports = [
+    ./fzf.nix
     ./git.nix
     ./neovim.nix
     ./zsh.nix
@@ -27,6 +28,7 @@ in
       inetutils
       wget
       gcc
+      # TODO: add gm, ffmpeg with CUDA, sam, terraform
     ];
 
     sessionVariables = {

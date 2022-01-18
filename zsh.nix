@@ -9,6 +9,14 @@
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
+
+    initExtraFirst = ''
+      source $HOME/.nix-profile/etc/profile.d/nix.sh
+    '';
+
+    initExtra = ''
+      path+=("$HOME/bin")
+    '';
   };
 
   programs.zsh.prezto =  {
@@ -52,9 +60,12 @@
     };
     utility.safeOps = true;
 
-    extraConfig = ''
-      source $HOME/.nix-profile/etc/profile.d/nix.sh
-      path+=("$HOME/bin")
-    '';
+  };
+
+  programs.zsh.zplug = {
+    enable = true; 
+    plugins = [
+      { name = "b4b4r07/enhancd"; tags = [use:init.sh]; }
+    ];
   };
 }
