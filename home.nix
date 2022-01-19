@@ -12,6 +12,7 @@ in
     ./neovim.nix
     ./zsh.nix
     ./rust.nix
+    ./aws.nix
     ./python.nix
     ./nodejs/default.nix
     ./minizinc/default.nix
@@ -28,7 +29,9 @@ in
       inetutils
       wget
       gcc
-      # TODO: add gm, ffmpeg with CUDA, sam, terraform
+      datamash
+      graphviz
+      # TODO: add gm, ffmpeg with CUDA 
     ];
 
     sessionVariables = {

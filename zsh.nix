@@ -63,7 +63,7 @@
   };
 
   programs.zsh.zplug = {
-    enable = true; 
+    enable = false;
     plugins = [
       { name = "b4b4r07/enhancd"; tags = [use:init.sh]; }
     ];
