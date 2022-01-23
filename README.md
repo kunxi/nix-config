@@ -52,6 +52,18 @@ Restart the shell, and you should expect the familiar zsh with *pure* theme.
 Ensure the `locale = "C.UTF-8"` is set, otherwise the autocomplete will mess
 up the prompts.
 
+## Usage
+
+We can search the zsh history with `fzf`, by typing Ctrl-R.
+
+Also, when searching the file in the current directory, try this:
+
+```bash
+vim [Ctrl-T]
+```
+
+This will trigger the fzf search.
+
 ## Troubleshooting
 
 If `home-manager switch` fails with conflicts, we can inspect the conflicted packages as:
