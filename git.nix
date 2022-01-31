@@ -43,11 +43,27 @@
         pager = true;
       };
 
-      merge.tool = "vimdiff";
-      diff.tool = "vimdiff";
+      merge = {
+        tool = "vimdiff";
+        conflictStyle = "diff3";
+      };
+
+      diff = {
+        tool = "vimdiff";
+        colorMoved = true;
+        colorMovedWS = "allow-indentation-change";
+      };
+
+      pull = {
+        rebaes = true;
+        default = "current";
+      };
+
+      log.date = "local";
+      rebase.autosquash = true;
+      stash.showPath = true;
+      tag.sort = "version:refname";
       difftool.prompt = false;
-      pull.rebaes = true;
-      push.default = "current";
     };
 
     # TODO: add gitignore.
