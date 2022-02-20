@@ -31,6 +31,8 @@ in
       gcc
       datamash
       graphviz
+      sqlite
+      rlwrap  # rlwrap sqlite3 foo.db for readline support.
       # TODO: add gm, ffmpeg with CUDA 
     ];
 
