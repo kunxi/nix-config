@@ -32,6 +32,8 @@
       core = {
         editor = "nvim";
         preloadingindex = true;
+        autocrlf = true;
+        eol = "lf";
       };
 
       color = {
