@@ -52,6 +52,7 @@
 
       diff = {
         tool = "vimdiff";
+        wsErrorHighlight = "all";
         colorMoved = true;
         colorMovedWS = "allow-indentation-change";
       };
