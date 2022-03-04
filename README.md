@@ -64,6 +64,16 @@ vim [Ctrl-T]
 
 This will trigger the fzf search.
 
+
+## Shells
+
+For less used environment, we can get a nix-shell, for example:
+
+```bash
+nix-shell ~/.config/nixpkgs/shells/llvm.nix
+```
+
+
 ## Troubleshooting
 
 If `home-manager switch` fails with conflicts, we can inspect the conflicted packages as:
@@ -78,4 +88,3 @@ to break the tie:
 ```
 nix-env --set-flag priority 3 git-2.33.0
 ```
-
