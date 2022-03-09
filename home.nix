@@ -16,6 +16,7 @@ in
     ./python.nix
     ./nodejs/default.nix
     ./minizinc/default.nix
+    ./tmux.nix
   ];
 
   home = {
