@@ -5,6 +5,7 @@
 
   home.packages = with pkgs; [
     terraform
+    helm
     aws-sam-cli
     aws-iam-authenticator
   ];

@@ -12,7 +12,7 @@ in
     ./neovim.nix
     ./zsh.nix
     ./rust.nix
-    ./aws.nix
+    ./cloud.nix
     ./python.nix
     ./nodejs/default.nix
     ./minizinc/default.nix
