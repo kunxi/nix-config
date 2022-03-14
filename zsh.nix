@@ -6,6 +6,10 @@
   #  $ echo /home/bookstack/.nix-profile/bin/zsh | sudo tee -a /etc/shells
   #  $ chsh -s /home/bookstack/.nix-profile/bin/zsh
 
+  programs.starship = {
+    enable = true;
+  };
+
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
@@ -42,7 +46,7 @@
     ];
     editor.keymap = "emacs";
     editor.dotExpansion = true;
-    prompt.theme = "pure";
+    # prompt.theme = "pure";
 
     python.virtualenvInitialize = true;
     python.virtualenvAutoSwitch = true;
