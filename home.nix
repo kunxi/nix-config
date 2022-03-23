@@ -21,20 +21,20 @@ in
 
   home = {
     packages = with pkgs; [
-      awscli
-      htop
-      ripgrep
-      file
-      openssh
-      strace
-      ltrace
-      inetutils
-      wget
-      gcc
       datamash
+      file
+      gcc
       graphviz
-      sqlite
+      htop
+      inetutils
+      ltrace
+      openssh
+      patch
+      ripgrep
       rlwrap  # rlwrap sqlite3 foo.db for readline support.
+      sqlite
+      strace
+      wget
       # TODO: add gm, ffmpeg with CUDA 
     ];
 
