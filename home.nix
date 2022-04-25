@@ -7,6 +7,7 @@ let
 in
 {
   imports = [
+    ./cli.nix
     ./fzf.nix
     ./git.nix
     ./neovim.nix
@@ -30,7 +31,6 @@ in
       ltrace
       openssh
       patch
-      ripgrep
       rlwrap  # rlwrap sqlite3 foo.db for readline support.
       sqlite
       strace
