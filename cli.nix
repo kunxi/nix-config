@@ -7,6 +7,5 @@
     fd          # replace find
     ripgrep     # replace grep
     zoxide      # replace cd
-    dust        # replace du
   ];
 }
