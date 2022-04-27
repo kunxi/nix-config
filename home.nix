@@ -18,6 +18,7 @@ in
     ./nodejs/default.nix
     ./minizinc/default.nix
     ./tmux.nix
+    ./zoxide.nix
   ];
 
   home = {

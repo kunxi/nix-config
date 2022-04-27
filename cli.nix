@@ -6,6 +6,5 @@
     bat         # a cat clone
     fd          # replace find
     ripgrep     # replace grep
-    zoxide      # replace cd
   ];
 }
