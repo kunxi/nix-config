@@ -24,6 +24,7 @@ in
   home = {
     packages = with pkgs; [
       datamash
+      dos2unix
       file
       gcc
       graphviz
@@ -36,6 +37,7 @@ in
       sqlite
       strace
       wget
+      unzip
       # TODO: add gm, ffmpeg with CUDA 
     ];
 

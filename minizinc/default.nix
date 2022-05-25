@@ -4,7 +4,7 @@
   home.packages = with pkgs; [
     minizinc
     gecode
-    or-tools
+    cbc
   ];
 
   home.file = {

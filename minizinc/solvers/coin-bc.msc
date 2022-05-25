@@ -1,0 +1,5 @@
+name = "COIN-BC";
+version = "2.10.4";
+id = "org.minizinc.mip.coin-bc";
+executable = "-Glinear";
+stdFlags = ["-s","-v","-p"];
