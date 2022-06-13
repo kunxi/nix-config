@@ -24,6 +24,7 @@ in
   home = {
     packages = with pkgs; [
       datamash
+      dig
       dos2unix
       file
       gcc
