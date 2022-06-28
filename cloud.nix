@@ -5,9 +5,10 @@
 
   home.packages = with pkgs; [
     terraform
+    kubernetes
     kubernetes-helm
     awscli
-    aws-sam-cli
+    # aws-sam-cli: FIXME
     aws-iam-authenticator
   ];
 }

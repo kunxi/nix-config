@@ -28,6 +28,7 @@ in
       dos2unix
       file
       gcc
+      gnumake
       graphviz
       htop
       inetutils
@@ -49,7 +50,7 @@ in
 
     username = username;
     homeDirectory = homedir;
-    stateVersion = "21.11";
+    stateVersion = "22.11";
   };
 
   programs.home-manager.enable = true;
