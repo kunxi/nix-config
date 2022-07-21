@@ -8,7 +8,7 @@
     kubernetes
     kubernetes-helm
     awscli
-    # aws-sam-cli: FIXME
+    aws-sam-cli
     aws-iam-authenticator
   ];
 }
