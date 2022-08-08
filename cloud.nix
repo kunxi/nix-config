@@ -10,5 +10,6 @@
     awscli
     aws-sam-cli
     aws-iam-authenticator
+    vault
   ];
 }

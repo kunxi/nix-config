@@ -7,5 +7,6 @@
     fd          # replace find
     ripgrep     # replace grep
     neofetch
+    redis
   ];
 }
