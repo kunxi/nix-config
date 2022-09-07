@@ -7,6 +7,7 @@
     fd          # replace find
     ripgrep     # replace grep
     neofetch
+    parallel
     podman
     redis
   ];
