@@ -16,6 +16,6 @@
     # Normal use:
     # $ conda-shell
     # $ conda install ipython numpy
-    conda
+    # conda
   ];
 }
