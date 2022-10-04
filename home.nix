@@ -20,19 +20,35 @@ let
     vault
   ];
 
+  pythonPackages = with pkgs.python310Packages; [
+    black
+    cookiecutter
+    flake8
+    ipython
+    pip
+    python
+    setuptools
+
+    # python, if we want to use conda
+    # First time use:
+    # $ conda-shell
+    # $ conda-install
+    # Normal use:
+    # $ conda-shell
+    # $ conda install ipython numpy
+    # conda
+  ];
+
 in
 {
   imports = [
-    ./fzf.nix
     ./git.nix
     ./neovim.nix
     ./zsh.nix
     ./rust.nix
-    ./python.nix
     ./nodejs/default.nix
     ./minizinc/default.nix
     ./tmux.nix
-    ./zoxide.nix
   ];
 
   nixpkgs.config = {
@@ -51,7 +67,6 @@ in
   home.sessionVariables = {
       LANG = locale;
       LC_ALL = locale;
-      EDITOR = "nvim";
   };
 
     home.packages = with pkgs; [
@@ -102,8 +117,9 @@ in
     wget
     xsv
     yarn
-    # TODO: add gm, ffmpeg with CUDA 
-  ] ++ devopsPackages; 
+    zoxide
+    # TODO: add gm, ffmpeg with CUDA
+  ] ++ devopsPackages ++ pythonPackages;
 
 
   # Use nix-direnv integration
