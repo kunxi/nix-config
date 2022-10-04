@@ -33,6 +33,10 @@
 
       # zoxide installation
       eval "$(zoxide init zsh)"
+
+      # common used aliases
+      alias pbcopy=clip.exe
+      alias k=kubectl
     '';
   };
 

@@ -20,6 +20,20 @@ let
     vault
   ];
 
+  macOSPackages = with pkgs; [
+    vscode
+  ];
+
+  linuxPackages = with pkgs; [
+    binutils
+    dig
+    gcc
+    gnumake
+    inetutils
+    ltrace
+    strace
+  ];
+
   pythonPackages = with pkgs.python310Packages; [
     black
     cookiecutter
@@ -69,14 +83,9 @@ in
       LC_ALL = locale;
   };
 
-    home.packages = with pkgs; [
-    # dig
-    # gcc
-    # gnumake
-    # inetutils
-    #ltrace
-    # strace
+  home.packages = with pkgs; [
     autoconf
+    cmake
     bat # cat replacement written in Rust
     curl
     datamash
@@ -113,13 +122,15 @@ in
     tokei # Handy tool to see lines of code by language
     tree
     unzip
-    vscode
     wget
     xsv
     yarn
     zoxide
     # TODO: add gm, ffmpeg with CUDA
-  ] ++ devopsPackages ++ pythonPackages;
+  ] ++ devopsPackages ++ pythonPackages
+    ++ lib.optionals pkgs.hostPlatform.isLinux linuxPackages
+    ++ lib.optionals pkgs.hostPlatform.isDarwin macOSPackages
+  ;
 
 
   # Use nix-direnv integration
