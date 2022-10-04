@@ -4,6 +4,22 @@ let
   locale = "en_US.UTF-8";
   homedir = builtins.getEnv "HOME";
   username = builtins.getEnv "USER";
+
+  devopsPackages = with pkgs; [
+    awscli
+    aws-sam-cli
+    aws-iam-authenticator
+
+    kubectl
+    kubectx
+    kubernetes-helm
+    skaffold
+    tilt
+
+    terraform
+    vault
+  ];
+
 in
 {
   imports = [
@@ -12,7 +28,6 @@ in
     ./neovim.nix
     ./zsh.nix
     ./rust.nix
-    ./devops.nix
     ./python.nix
     ./nodejs/default.nix
     ./minizinc/default.nix
@@ -39,7 +54,7 @@ in
       EDITOR = "nvim";
   };
 
-  home.packages = with pkgs; [
+    home.packages = with pkgs; [
     # dig
     # gcc
     # gnumake
@@ -88,7 +103,7 @@ in
     xsv
     yarn
     # TODO: add gm, ffmpeg with CUDA 
-  ];
+  ] ++ devopsPackages; 
 
 
   # Use nix-direnv integration
