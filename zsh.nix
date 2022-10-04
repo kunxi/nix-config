@@ -35,8 +35,12 @@
       eval "$(zoxide init zsh)"
 
       # common used aliases
-      alias pbcopy=clip.exe
       alias k=kubectl
+
+      if (( ''$+WSL_DISTRO_NAME )); then
+        # WSL-specific aliases
+        alias pbcopy=clip.exe
+      fi
     '';
   };
 
