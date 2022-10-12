@@ -6,7 +6,7 @@ let
   username = builtins.getEnv "USER";
 
   devopsPackages = with pkgs; [
-    awscli
+    awscli2
     aws-sam-cli
     aws-iam-authenticator
 
