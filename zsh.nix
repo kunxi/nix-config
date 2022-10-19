@@ -11,12 +11,14 @@
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
-
-    initExtra = ''
+  
+    initExtraFirst = ''
       if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
         source $HOME/.nix-profile/etc/profile.d/nix.sh
       fi
+    '';
 
+    initExtra = ''
       # Load environment variables from a file; this approach allows me to not
       # commit secrets like API keys to Git
       if [ -e ~/.envrc ]; then
