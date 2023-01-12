@@ -30,6 +30,7 @@ let
     gcc
     gnumake
     inetutils
+    jdk11_headless
     ltrace
     strace
   ];
@@ -79,8 +80,9 @@ in
   };
 
   home.sessionVariables = {
-      LANG = locale;
-      LC_ALL = locale;
+    LANG = locale;
+    LC_ALL = locale;
+    LC_CTYPE = locale;
   };
 
   home.packages = with pkgs; [
