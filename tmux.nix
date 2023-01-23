@@ -17,8 +17,4 @@
 
     # TODO: still need the configure the theme for eye-candy.
   };
-
-  home.sessionVariables = {
-    TMUX_TMPDIR = "/tmp";
-  };
 }
