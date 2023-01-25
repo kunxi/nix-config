@@ -30,7 +30,7 @@ let
     gcc
     gnumake
     inetutils
-    jdk11_headless
+    jdk17_headless
     ltrace
     strace
   ];
