@@ -34,6 +34,7 @@
         preloadingindex = true;
         autocrlf = true;
         eol = "lf";
+        filemode = false;
       };
 
       color = {
