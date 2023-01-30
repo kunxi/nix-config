@@ -6,7 +6,15 @@
   #  $ echo /home/bookstack/.nix-profile/bin/zsh | sudo tee -a /etc/shells
   #  $ chsh -s /home/bookstack/.nix-profile/bin/zsh
 
+  # use starship, and no-nerd-font preset, see issue #576
   programs.starship.enable = true;
+
+  home.file = {
+    "starship.config" = {
+      source = ./no-nerd-font.toml;
+      target = ".config/starship.toml";
+    };
+  };
 
   programs.zsh = {
     enable = true;

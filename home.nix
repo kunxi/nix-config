@@ -59,7 +59,7 @@ in
   imports = [
     ./git.nix
     ./neovim.nix
-    ./zsh.nix
+    ./zsh/default.nix
     ./rust.nix
     ./nodejs/default.nix
     ./minizinc/default.nix
@@ -119,7 +119,6 @@ in
     sd # sed replacement
     skim # fuzzy finder
     sqlite
-    starship
     tealdeer
     tokei # Handy tool to see lines of code by language
     tree
