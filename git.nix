@@ -63,6 +63,10 @@
         default = "current";
       };
 
+      push = {
+        autoSetupRemote = "true";
+      };
+
       log.date = "local";
       rebase.autosquash = true;
       stash.showPath = true;
