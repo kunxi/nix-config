@@ -57,6 +57,7 @@ let
 in
 {
   imports = [
+    ./crypto.nix
     ./git.nix
     ./neovim.nix
     ./zsh/default.nix

@@ -76,6 +76,7 @@
       "prompt"
       "syntax-highlighting"
       "autosuggestions"
+      "gpg"
       "ssh"
       "ruby"
       "python"
