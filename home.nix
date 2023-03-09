@@ -12,6 +12,7 @@ let
 
     kubectl
     kubectx
+    kubelogin
     kubernetes-helm
     skaffold
     tilt
