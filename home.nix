@@ -115,6 +115,7 @@ in
     parallel
     podman
     pre-commit
+    pv
     redis
     ripgrep
     rlwrap  # rlwrap sqlite3 foo.db for readline support.
