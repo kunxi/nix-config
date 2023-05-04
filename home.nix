@@ -9,6 +9,7 @@ let
     awscli2
     aws-sam-cli
     aws-iam-authenticator
+    fastly
 
     kubectl
     kubectx
