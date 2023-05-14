@@ -37,7 +37,12 @@ let
     strace
   ];
 
-  pythonPackages = with pkgs.python310Packages; [
+  pythonGlobalPackags = with pkgs; [
+    poetry
+    pipx
+  ];
+
+  pythonPackages = with pkgs.python311Packages; [
     black
     cookiecutter
     flake8
@@ -132,7 +137,7 @@ in
     yarn
     zoxide
     # TODO: add gm, ffmpeg with CUDA
-  ] ++ devopsPackages ++ pythonPackages
+  ] ++ devopsPackages ++ pythonPackages ++ pythonGlobalPackags
     ++ lib.optionals pkgs.hostPlatform.isLinux linuxPackages
     ++ lib.optionals pkgs.hostPlatform.isDarwin macOSPackages
   ;
