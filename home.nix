@@ -47,7 +47,9 @@ let
     cookiecutter
     flake8
     ipython
+    nox
     pip
+    nox
     python
     setuptools
     yamllint
@@ -125,6 +127,7 @@ in
     pre-commit
     pv
     redis
+    restic
     ripgrep
     rlwrap  # rlwrap sqlite3 foo.db for readline support.
     sd # sed replacement
