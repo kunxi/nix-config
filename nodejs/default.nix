@@ -5,6 +5,7 @@
     nodejs-18_x
     yarn
     nodePackages.lerna
+    nodePackages.jsonlint
   ];
 
   home.file = {

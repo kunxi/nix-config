@@ -9,6 +9,7 @@ let
     awscli2
     aws-sam-cli
     aws-iam-authenticator
+    cf-terraforming
     fastly
 
     kubectl
@@ -103,7 +104,6 @@ in
     docker
     docker-compose
     dos2unix
-    exa
     fd
     file
     fzf
