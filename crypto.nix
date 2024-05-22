@@ -10,7 +10,6 @@
   services.gpg-agent = {
     enable = true;
     enableSshSupport = false;
-    pinentryFlavor = "curses";
   };
 
   # NO need to setup GPG_TTY, the gpg module of prezto handles it.

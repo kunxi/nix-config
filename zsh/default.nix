@@ -18,7 +18,7 @@
 
   programs.zsh = {
     enable = true;
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
 
     initExtraFirst = ''
       # Source the nix-daemon if file exists.

@@ -40,7 +40,6 @@ let
 
   pythonGlobalPackags = with pkgs; [
     poetry
-    pipx
   ];
 
   pythonPackages = with pkgs.python311Packages; [
@@ -51,6 +50,7 @@ let
     pip
     python
     setuptools
+    yamllint
 
     # python, if we want to use conda
     # First time use:
@@ -111,6 +111,7 @@ in
     gradle
     htop
     httpie
+    imagemagick
     jq
     just
     mdcat
