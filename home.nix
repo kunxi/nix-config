@@ -108,6 +108,7 @@ in
     file
     fzf
     graphviz
+    grizzly
     gradle
     htop
     httpie
