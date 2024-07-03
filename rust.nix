@@ -5,6 +5,7 @@
     cargo
     rustc
     rustfmt
+    sqlx-cli
   ];
 
   home.sessionVariables = {
