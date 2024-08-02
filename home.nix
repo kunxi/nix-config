@@ -100,7 +100,8 @@ in
     autoconf
     cmake
     bat # cat replacement written in Rust
-    curl
+    bc
+    curlFull
     datamash
     direnv
     docker
