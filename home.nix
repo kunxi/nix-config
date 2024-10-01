@@ -19,8 +19,8 @@ let
     skaffold
     tilt
 
-    terraform
-    vault
+    # terraform
+    # vault
   ];
 
   macOSPackages = with pkgs; [
@@ -120,7 +120,7 @@ in
     just
     mdcat
     neofetch
-    nomad
+    # nomad
     openssh
     patch
     parallel
