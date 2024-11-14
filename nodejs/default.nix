@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    nodejs-18_x
+    nodejs_22
     yarn
     nodePackages.jsonlint
   ];
