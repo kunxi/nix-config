@@ -32,7 +32,7 @@
       core = {
         editor = "nvim";
         preloadingindex = true;
-        autocrlf = true;
+        autocrlf = false;
         eol = "lf";
         filemode = false;
       };
