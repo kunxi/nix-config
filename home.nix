@@ -19,7 +19,7 @@ let
     skaffold
     tilt
 
-    # terraform
+    terraform
     # vault
   ];
 
@@ -116,6 +116,7 @@ in
     htop
     httpie
     imagemagick
+    iperf3
     jq
     just
     mdcat
