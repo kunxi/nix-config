@@ -87,7 +87,7 @@ in
   home = {
     username = username;
     homeDirectory = homedir;
-    stateVersion = "22.11";
+    stateVersion = "24.11";
   };
 
   home.sessionVariables = {
@@ -140,7 +140,6 @@ in
     tree
     unzip
     wget
-    xsv
     yarn
     zoxide
     # TODO: add gm, ffmpeg with CUDA
