@@ -33,7 +33,6 @@ let
     gcc
     gnumake
     inetutils
-    jdk17_headless
     ltrace
     strace
   ];
@@ -49,7 +48,7 @@ let
     ipython
     nox
     pip
-    nox
+    nox  # test accros versions
     python
     setuptools
     yamllint
@@ -102,23 +101,22 @@ in
     bat # cat replacement written in Rust
     bc
     curlFull
-    datamash
+    datamash # stats
     direnv
     docker
     docker-compose
     dos2unix
-    fd
+    fd  # find
     file
     fzf
     graphviz
-    grizzly
-    gradle
+    grizzly  # grafana cmdline
     htop
     httpie
     imagemagick
     iperf3
     jq
-    just
+    just  # make alternative
     mdcat
     neofetch
     # nomad
@@ -127,21 +125,20 @@ in
     parallel
     podman
     pre-commit
-    pv
+    pv  # progress view
     redis
-    restic
+    restic  # backup
     ripgrep
     rlwrap  # rlwrap sqlite3 foo.db for readline support.
-    sd # sed replacement
+    sd  # sed replacement
     skim # fuzzy finder
     sqlite
-    tealdeer
+    tealdeer  # tldr
     tokei # Handy tool to see lines of code by language
     tree
     unzip
     wget
-    yarn
-    zoxide
+    zoxide  # cd
     # TODO: add gm, ffmpeg with CUDA
   ] ++ devopsPackages ++ pythonPackages ++ pythonGlobalPackags
     ++ lib.optionals pkgs.hostPlatform.isLinux linuxPackages
