@@ -20,7 +20,7 @@ let
     tilt
 
     terraform
-    # vault
+    vault
   ];
 
   macOSPackages = with pkgs; [
@@ -82,7 +82,7 @@ in
   };
 
   programs.home-manager.enable = true;
-  
+
   home = {
     username = username;
     homeDirectory = homedir;
@@ -159,4 +159,3 @@ in
   };
 
 }
-
