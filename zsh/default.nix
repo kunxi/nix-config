@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   # Invoke home-manager: `home-manager switch` to deploy the change, to switch
@@ -20,7 +20,7 @@
     enable = true;
     autosuggestion.enable = true;
 
-    initExtraFirst = ''
+    initExtra = lib.mkBefore ''
       # Source the nix-daemon if file exists.
       if [ -e /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh ]; then
         source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
@@ -32,7 +32,7 @@
       fi
     '';
 
-    initExtra = ''
+    initContent = ''
       # Load environment variables from a file; this approach allows me to not
       # commit secrets like API keys to Git
       if [ -e ~/.envrc ]; then
@@ -48,7 +48,7 @@
       fi
 
       # zoxide installation
-      eval "$(zoxide init zsh)"
+      # eval "$(zoxide init zsh)"
 
       # common used aliases
       alias k=kubectl
