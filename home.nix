@@ -16,15 +16,11 @@ let
     kubectx
     kubelogin-oidc
     kubernetes-helm
-    skaffold
-    tilt
+    # skaffold
+    # tilt
 
     terraform
     vault
-  ];
-
-  macOSPackages = with pkgs; [
-    vscode
   ];
 
   linuxPackages = with pkgs; [
@@ -37,16 +33,13 @@ let
     strace
   ];
 
-  pythonGlobalPackags = with pkgs; [
-    poetry
-  ];
+  macOSPackages = with pkgs; [];
 
-  pythonPackages = with pkgs.python311Packages; [
+  pythonPackages = with pkgs.python313Packages; [
     black
     cookiecutter
     flake8
     ipython
-    nox
     pip
     nox  # test accros versions
     python
@@ -66,7 +59,7 @@ let
 in
 {
   imports = [
-    ./crypto.nix
+    # ./crypto.nix
     ./git.nix
     ./neovim.nix
     ./zsh/default.nix
@@ -78,7 +71,6 @@ in
 
   nixpkgs.config = {
     allowUnfree = true;
-    allowUnsupportedSystem = true;
   };
 
   programs.home-manager.enable = true;
@@ -86,7 +78,8 @@ in
   home = {
     username = username;
     homeDirectory = homedir;
-    stateVersion = "24.11";
+    stateVersion = "25.05";
+    enableNixpkgsReleaseCheck = false;
   };
 
   home.sessionVariables = {
@@ -98,7 +91,7 @@ in
   home.packages = with pkgs; [
     autoconf
     cmake
-    bat # cat replacement written in Rust
+    # bat # cat replacement written in Rust
     bc
     curlFull
     datamash # stats
@@ -116,35 +109,34 @@ in
     imagemagick
     iperf3
     jq
-    just  # make alternative
-    mdcat
-    neofetch
+    # just  # make alternative
+    # mdcat
+    # neofetch
     # nomad
     openssh
     patch
     parallel
-    podman
+    # podman
     pre-commit
     pv  # progress view
     redis
     restic  # backup
     ripgrep
     rlwrap  # rlwrap sqlite3 foo.db for readline support.
-    sd  # sed replacement
-    skim # fuzzy finder
+    # sd  # sed replacement
+    # skim # fuzzy finder
     sqlite
     tealdeer  # tldr
     tokei # Handy tool to see lines of code by language
     tree
     unzip
     wget
-    zoxide  # cd
+    # zoxide  # cd
     # TODO: add gm, ffmpeg with CUDA
-  ] ++ devopsPackages ++ pythonPackages ++ pythonGlobalPackags
+  ] ++ devopsPackages ++ pythonPackages
     ++ lib.optionals pkgs.hostPlatform.isLinux linuxPackages
     ++ lib.optionals pkgs.hostPlatform.isDarwin macOSPackages
   ;
-
 
   # Use nix-direnv integration
   programs.direnv = {
@@ -157,5 +149,4 @@ in
     enable = true;
     # TODO: add more configuration here.
   };
-
 }
