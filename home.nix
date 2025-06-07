@@ -16,28 +16,6 @@ let
   ];
 
   macOSPackages = with pkgs; [];
-
-  pythonPackages = with pkgs.python313Packages; [
-    black
-    cookiecutter
-    flake8
-    ipython
-    pip
-    nox  # test accros versions
-    python
-    setuptools
-    yamllint
-
-    # python, if we want to use conda
-    # First time use:
-    # $ conda-shell
-    # $ conda-install
-    # Normal use:
-    # $ conda-shell
-    # $ conda install ipython numpy
-    # conda
-  ];
-
 in
 {
   imports = [
@@ -47,6 +25,7 @@ in
     ./devel.nix
     ./neovim.nix
     ./zsh/default.nix
+    ./python.nix
     ./rust.nix
     ./nodejs/default.nix
     ./minizinc/default.nix
@@ -99,7 +78,7 @@ in
     wget
     # zoxide  # cd
     # TODO: add gm, ffmpeg with CUDA
-  ] ++ pythonPackages
+  ] 
     ++ lib.optionals pkgs.hostPlatform.isLinux linuxPackages
     ++ lib.optionals pkgs.hostPlatform.isDarwin macOSPackages
   ;
