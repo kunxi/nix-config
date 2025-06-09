@@ -5,24 +5,6 @@ let
   homedir = builtins.getEnv "HOME";
   username = builtins.getEnv "USER";
 
-  devopsPackages = with pkgs; [
-    awscli2
-    aws-sam-cli
-    aws-iam-authenticator
-    cf-terraforming
-    fastly
-
-    kubectl
-    kubectx
-    kubelogin-oidc
-    kubernetes-helm
-    # skaffold
-    # tilt
-
-    terraform
-    vault
-  ];
-
   linuxPackages = with pkgs; [
     binutils
     dig
@@ -34,35 +16,16 @@ let
   ];
 
   macOSPackages = with pkgs; [];
-
-  pythonPackages = with pkgs.python313Packages; [
-    black
-    cookiecutter
-    flake8
-    ipython
-    pip
-    nox  # test accros versions
-    python
-    setuptools
-    yamllint
-
-    # python, if we want to use conda
-    # First time use:
-    # $ conda-shell
-    # $ conda-install
-    # Normal use:
-    # $ conda-shell
-    # $ conda install ipython numpy
-    # conda
-  ];
-
 in
 {
   imports = [
     # ./crypto.nix
     ./git.nix
+    ./devops.nix
+    ./devel.nix
     ./neovim.nix
     ./zsh/default.nix
+    ./python.nix
     ./rust.nix
     ./nodejs/default.nix
     ./minizinc/default.nix
@@ -89,60 +52,36 @@ in
   };
 
   home.packages = with pkgs; [
-    autoconf
-    cmake
     # bat # cat replacement written in Rust
     bc
     curlFull
     datamash # stats
-    direnv
-    docker
-    docker-compose
     dos2unix
     fd  # find
     file
     fzf
     graphviz
-    grizzly  # grafana cmdline
     htop
-    httpie
     imagemagick
     iperf3
-    jq
     # just  # make alternative
     # mdcat
     # neofetch
     # nomad
     openssh
-    patch
     parallel
     # podman
-    pre-commit
-    pv  # progress view
-    redis
     restic  # backup
-    ripgrep
-    rlwrap  # rlwrap sqlite3 foo.db for readline support.
     # sd  # sed replacement
     # skim # fuzzy finder
-    sqlite
-    tealdeer  # tldr
-    tokei # Handy tool to see lines of code by language
-    tree
     unzip
     wget
     # zoxide  # cd
     # TODO: add gm, ffmpeg with CUDA
-  ] ++ devopsPackages ++ pythonPackages
+  ] 
     ++ lib.optionals pkgs.hostPlatform.isLinux linuxPackages
     ++ lib.optionals pkgs.hostPlatform.isDarwin macOSPackages
   ;
-
-  # Use nix-direnv integration
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-  };
 
   # ssh
   programs.ssh = {
