@@ -52,12 +52,14 @@ in
   };
 
   home.packages = with pkgs; [
-    # bat # cat replacement written in Rust
-    bc
+    # Daily drives
+    bat         # cat replacement written in Rust
+    bc          # calculator
+    eza         # better ls
     curlFull
-    datamash # stats
+    datamash    # stats
     dos2unix
-    fd  # find
+    fd          # find
     file
     fzf
     graphviz
@@ -70,10 +72,10 @@ in
     # nomad
     openssh
     parallel
-    # podman
-    restic  # backup
-    # sd  # sed replacement
-    # skim # fuzzy finder
+    # podman    # installed from podman desktop
+    restic      # backup
+    # sd        # sed replacement
+    # skim      # fuzzy finder
     unzip
     wget
     # zoxide  # cd
