@@ -20,7 +20,12 @@
     enable = true;
     autosuggestion.enable = true;
 
-    initExtra = lib.mkBefore ''
+    shellAliases = rec {
+      k = "kubectl";
+      ls = "eza";
+    };
+
+    initContent = ''
       # Source the nix-daemon if file exists.
       if [ -e /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh ]; then
         source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
@@ -30,9 +35,7 @@
       if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
         source $HOME/.nix-profile/etc/profile.d/nix.sh
       fi
-    '';
 
-    initContent = ''
       # Load environment variables from a file; this approach allows me to not
       # commit secrets like API keys to Git
       if [ -e ~/.envrc ]; then
@@ -40,6 +43,9 @@
       fi
 
       path+=("$HOME/bin")
+      if [ -d "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ]; then
+        path+=("/Applications/Visual Studio Code.app/Contents/Resources/app/bin")
+      fi
 
       # fzf autocomplete
       if [ -n "''${commands[fzf-share]}" ]; then
@@ -49,9 +55,6 @@
 
       # zoxide installation
       # eval "$(zoxide init zsh)"
-
-      # common used aliases
-      alias k=kubectl
 
       if (( ''$+WSL_DISTRO_NAME )); then
         # WSL-specific aliases
