@@ -80,7 +80,7 @@ in
     wget
     # zoxide  # cd
     # TODO: add gm, ffmpeg with CUDA
-  ] 
+  ]
     ++ lib.optionals pkgs.hostPlatform.isLinux linuxPackages
     ++ lib.optionals pkgs.hostPlatform.isDarwin macOSPackages
   ;

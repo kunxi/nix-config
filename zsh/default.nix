@@ -43,8 +43,13 @@
       fi
 
       path+=("$HOME/bin")
+      # Add vscode
       if [ -d "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ]; then
         path+=("/Applications/Visual Studio Code.app/Contents/Resources/app/bin")
+      fi
+      # Add flutter
+      if [ -d "$HOME/development/flutter/bin" ]; then
+        path+=("$HOME/development/flutter/bin")
       fi
 
       # fzf autocomplete
