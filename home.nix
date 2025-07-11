@@ -19,7 +19,7 @@ let
 in
 {
   imports = [
-    # ./crypto.nix
+    ./crypto.nix
     ./git.nix
     ./devops.nix
     ./devel.nix

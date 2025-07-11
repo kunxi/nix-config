@@ -1,11 +1,14 @@
 { config, pkgs, ... }:
 
 {
+  linuxPackage = with pkgs; [
+    pinentry
+  ];
+
   home.packages = with pkgs; [
     gnupg
     pass
-    pinentry
-  ];
+  ] ++ lib.optionals pkgs.hostPlatform.isLinux linuxPackage;
 
   services.gpg-agent = {
     enable = true;
